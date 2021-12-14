@@ -1,0 +1,136 @@
+/* MESSAGE SENDER CONTAINER */
+.messageSender {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+/* MESSAGE SENDER HEADING */
+.messageSender__heading {
+  position: relative;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+/* MESSAGE SENDER CONTENT */
+.messageSender__content {
+  padding: 10px;
+  padding-bottom: 0px;
+}
+.messageSender__avatar {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.messageSender__avatarIcon {
+  width: 36px;
+  height: 36px;
+}
+.messageSender__avatar > p {
+  margin: 0;
+}
+.messageSender__input {
+  overflow: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+  margin-top: 10px;
+  height: 200px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.messageSender__input::-webkit-scrollbar {
+  display: none;
+}
+.content {
+  position: relative;
+  width: 100%;
+  overflow: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+  overflow-wrap: break-word;
+  line-height: 1.33;
+  margin-bottom: 10px;
+}
+.content:focus {
+  outline: none;
+}
+.content::-webkit-scrollbar {
+  display: none;
+}
+/* when not focused add a before pseudo element with the data-text attribute value as content */
+.content:empty:not(:focus):before {
+  content: attr(data-placeholder);
+  font-weight: 400;
+  color: rgba(73, 80, 87, 0.7);
+}
+
+.input__gifContainer {
+  position: relative;
+}
+.input__gifContainerCloseButton {
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.input__gifContainer > img {
+  width: 100%;
+}
+/* MESSAGE SENDER BOTTOM*/
+.messageSender_bottom {
+  padding: 10px;
+  padding-top: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+.messageSender__gifDropdown {
+  position: relative;
+  background-color: #fff;
+}
+
+.messageSender__gifDropdown > button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu {
+  position: absolute;
+  display: none;
+  width: 300px;
+  height: 300px;
+  overflow: scroll;
+}
+.menu::before {
+  display: block;
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+
+  border-bottom: 10px solid #0d6efd;
+}
+.item {
+  width: 100%;
+  margin-bottom: 5px;
+}
+.gif__Search {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.messageSender_submit {
+  cursor: pointer;
+  border: none;
+  padding: 5px;
+  width: 100px;
+  color: #fff;
+  background-color: #4267b2;
+}
