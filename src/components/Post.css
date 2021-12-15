@@ -23,7 +23,7 @@
   align-items: center;
   padding-top: 10px;
   overflow: auto;
-  word-break: normal;
+  word-break: break-all;
 }
 .post__content::-webkit-scrollbar {
   display: none;
