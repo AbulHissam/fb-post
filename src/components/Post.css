@@ -17,10 +17,16 @@
   width: 500px;
 }
 .post__content {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 10px;
+  overflow: auto;
+  word-break: normal;
+}
+.post__content::-webkit-scrollbar {
+  display: none;
 }
 .post__gif {
   width: 100%;
@@ -30,5 +36,4 @@
 .post__message {
   align-self: flex-start;
   margin-bottom: 10px;
-  overflow-wrap: break-word;
 }
